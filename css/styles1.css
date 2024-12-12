@@ -1,0 +1,60 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  header h1 {
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section styles */
+  section {
+    padding: 20px;
+  }
+  
+  #about {
+    background-color: #f4f4f4;
+  }
+  
+  .gallery-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .gallery-container img {
+    border: solid #ccc;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Custom styles */
+  #resources iframe {
+    border: none;
+  }
+
+  img{
+    width: 300px;
+    height: 200px;
+  }

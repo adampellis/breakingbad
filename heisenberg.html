@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breaking Bad Quotes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #quote-display {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Breaking Bad Quotes Generator</h1>
+  </header>
+
+  <main>
+    <section id="quote-section">
+      <button onclick="generateQuote()">Get a Quote</button>
+      <p id="quote-display"></p>
+    </section>
+  </main>
+
+  <script>
+    const quotes = [
+      "I am the one who knocks.",
+      "Say my name.",
+      "I did it for me. I liked it. I was good at it.",
+      "Yeah, science!",
+      "I am not in danger, I am the danger."
+    ];
+
+    const colors = ["green", "yellow", "white", "black"];
+    let colorIndex = 0;
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote-display').innerText = quotes[randomIndex];
+
+      // Change background color
+      const newColor = colors[colorIndex];
+      document.body.style.backgroundColor = newColor;
+
+      // Change text color to white if background is black, otherwise default to black
+      document.body.style.color = newColor === "black" ? "white" : "#333";
+
+      // Update color index
+      colorIndex = (colorIndex + 1) % colors.length;
+    }
+  </script>
+
+</body>
+</html>
